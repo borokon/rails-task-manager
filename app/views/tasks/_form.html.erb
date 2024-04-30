@@ -1,0 +1,25 @@
+
+<div class = "container mt-5">
+  <div class = "row justify-content-center">
+    <div class="col-md-6">
+      <%= form_with model: @task,  class: 'needs-validation', novalidate: true do |f| %>
+        <div class="form-group">
+          <%= f.label :title, class: 'form-label'%>
+          <%= f.text_field :title, class: 'form-control', required: true %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :details, class: 'form-label' %>
+          <%= f.text_area :details, class: 'form-control', rows: 3, required: true %>
+        </div>
+        <br>
+        <div class="form-group">
+          <%= f.label :completed, class: 'form-check-label' %>
+          <%= f.check_box :completed, class: 'form-check-input' %>
+        </div>
+        <br>
+        <%= f.submit 'Submit', class: 'btn btn-primary'%>
+      <% end %>
+    </div>
+  </div>
+</div>
